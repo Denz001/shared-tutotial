@@ -54,24 +54,26 @@ def strmeds1():
 
     wrong_lyric = str(input('What\'s the wrong word? \n'))
 
-    if wrong_lyric in lyrics and len(wrong_lyric) >= 6:
-         right_lyric = str(input('What do you want to replace it with? \n'))
-         new_lyrics = lyrics.replace(wrong_lyric,right_lyric)
+    if wrong_lyric == 'normies' or wrong_lyric == 'uglies':
+        right_lyric = str(input('What do you want to replace it with? \n'))
+        if right_lyric == 'broken' or right_lyric == 'beaten':
+            new_lyrics = lyrics.replace(wrong_lyric,right_lyric)
+        else:
+            print('\nThat is not the right word.\n')
     else:
-        print('\nThat word is not in the lyrics\n')
+        print('\nThat word is not in the lyrics.\n')
         return
     
     another_one = input('Is there another wrong word? (Y/N)\n')
     if another_one == 'Y' or another_one == 'y':
         wrong_lyric1 = input('What\'s the other word? \n')
-        if len(wrong_lyric1) >= 6:
+        if wrong_lyric1 == 'normies' or wrong_lyric1 == 'uglies':
             right_lyric1 = input('What do you want to replace it with? \n')
             print(new_lyrics.replace(wrong_lyric1,right_lyric1))
         else:
             print('\nThat word is not in the lyrics.\n')
-            return
     elif another_one == 'N' or another_one == 'n':
-        print(new_lyrics)
+        print(f'{new_lyrics} \nYou missed another wrong word\n')
         return
 
 
@@ -88,3 +90,4 @@ elif user_input == 4:
     strmeds1()
 else:
     print('That is not in the list')
+    
