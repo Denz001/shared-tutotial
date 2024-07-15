@@ -76,7 +76,7 @@ def strmeds1():
 
 
 user_input = int(input(f'''Here\'s a list of my exercises. {list} 
-\n Which exercise do you want to see? (Select a number) \n'''))
+\nWhich exercise do you want to see? (Select a number) \n'''))
 
 if user_input == 1: 
     f_str()
