@@ -48,7 +48,7 @@ def strmeds1():
     To see a marching band
     He said, "Son, when you grow up
     Would you be the savior of the normies
-    The uglies and the damned?" \n''')
+    The uglies and the damned?"\n''')
 
     print(lyrics)
 
