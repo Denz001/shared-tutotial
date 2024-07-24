@@ -105,7 +105,25 @@ def shopping_cart():
 
     grocery_list.extend(additional)
 
-    print(f'\nYour new list is {grocery_list}\n')
+    new_list1 = grocery_list
+
+    print(f'\nYour new list is {new_list1}')
+
+    print('''
+    After other items to your list
+    you head to the grocery and buy
+    3 things and cross them off.''')
+
+    bought_grocery = input('\nWhat groceries on your list did you buy?\n')
+    bought_list = bought_grocery.split(',')
+    
+    print(f'\nYou bought: {bought_list}')
+
+    for item in bought_list:
+        if item in new_list1:
+            new_list1.remove(item)
+
+    print(f'\nHere are the remaining items you need to buy: {new_list1}\n')
 
 user_input = int(input(f'''Here\'s a list of my exercises. {list} 
 \nWhich exercise do you want to see? (Select a number) \n'''))
