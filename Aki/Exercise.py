@@ -5,7 +5,8 @@ list = ('''
     1. The F String\n
     2. String Index (PW recommender)\n
     3. String Methods\n
-    4. String Methods Pt. 2\n''')
+    4. String Methods Pt. 2\n
+    5. List Methods (Shopping cart)\n''')
 
 
 def f_str():
@@ -77,6 +78,35 @@ def strmeds1():
         return
 
 
+def shopping_cart():
+    print('''
+    On the way home from work, 
+    your mother suddenly called you 
+    and asked you to pick up some groceries.
+    She sent you a list of items to get.
+    ''')
+
+    grocery_list = [
+        'banana', 
+        'cereal', 
+        'milk', 
+        'eggs']
+    
+    print(grocery_list)
+    
+    print('''
+    You notice that there is not enough item
+    on the list, so you add more.
+    ''')
+
+    new_list = input('What items do you add on the list?\n')
+
+    additional = new_list.split(',')
+
+    grocery_list.extend(additional)
+
+    print(f'\nYour new list is {grocery_list}\n')
+
 user_input = int(input(f'''Here\'s a list of my exercises. {list} 
 \nWhich exercise do you want to see? (Select a number) \n'''))
 
@@ -88,6 +118,8 @@ elif user_input == 3:
     strmeds()
 elif user_input == 4:
     strmeds1()
+elif user_input == 5:
+    shopping_cart()
 else:
     print('That is not in the list')
     
