@@ -9,6 +9,7 @@
 - String Index
 - String Methods
 - String Methods Pt. 2
+- List Methods (Shopping cart)
 
 ## How to Navigate
 Input the number you see on the left side of the Python exercise you want to run. 
